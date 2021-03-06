@@ -26,4 +26,5 @@ function link_dotfile {
 }
 
 link_dotfile .vimrc
+link_dotfile .tmux.conf
 
