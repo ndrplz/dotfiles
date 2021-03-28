@@ -13,5 +13,5 @@ sys_keyboard_file=/etc/default/keyboard
 
 if ! grep -q $option $sys_keyboard_file; then
 	echo "Adding $option to $sys_keyboard_file"
-	echo $option >> $sys_keyboard_file
+	echo $option | sudo tee -a $sys_keyboard_file > /dev/null
 fi
