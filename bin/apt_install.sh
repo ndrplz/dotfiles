@@ -24,6 +24,7 @@ install openvpn
 install snapd
 install tmux
 install vim
+install zsh
 
 # Fun
 install figlet
