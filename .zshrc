@@ -59,3 +59,13 @@ if [ -f "$ALIASES_FILE" ]; then	source "$ALIASES_FILE"; fi
 ZSH_ALIASES="$HOME/.zsh_aliases"
 if [ -f "$ZSH_ALIASES" ]; then	source "$ZSH_ALIASES"; fi
 
+
+###############################################################################
+# Syntax highlightning
+###############################################################################
+SYNTAX_HIGHLIGHT_DIR="$HOME/bin/zsh-syntax-highlighting"
+if ! test -d $SYNTAX_HIGHLIGHT_DIR; then
+    mkdir -p "SYNTAX_HIGHLIGHT_DIR"
+    git clone https://github.com/zsh-users/zsh-syntax-highlighting.git "$SYNTAX_HIGHLIGHT_DIR";
+fi
+source $SYNTAX_HIGHLIGHT_DIR/zsh-syntax-highlighting.zsh
