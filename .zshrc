@@ -33,8 +33,11 @@ HISTFILE=~/.zsh_history
 ###############################################################################
 # Autocompletion
 ###############################################################################
-autoload -Uz compinit && compinit
+autoload -Uz compinit
 zstyle ':completion:*' menu select                 # arrow-key driven menu
+zmodload zsh/complist
+compinit
+_comp_options+=(globdots)                          # include hidden files
 bindkey -M menuselect 'h' vi-backward-char         # menu left
 bindkey -M menuselect 'k' vi-up-line-or-history    # menu up
 bindkey -M menuselect 'l' vi-forward-char          # menu right
