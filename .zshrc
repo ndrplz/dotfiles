@@ -1,11 +1,4 @@
 ###############################################################################
-# Prompt
-###############################################################################
-autoload -Uz promptinit && promptinit
-prompt adam1
-
-
-###############################################################################
 # Z shell options (see: man zshoptions)
 ###############################################################################
 setopt autocd
@@ -61,11 +54,24 @@ if [ -f "$ZSH_ALIASES" ]; then	source "$ZSH_ALIASES"; fi
 
 
 ###############################################################################
+# Prompt
+###############################################################################
+POWERLEVEL10K_DIR="$HOME/bin/powerlevel10k"
+if ! test -d "$POWERLEVEL10K_DIR"; then
+    mkdir -p "$POWERLEVEL10K_DIR";
+    git clone --depth=1 https://github.com/romkatv/powerlevel10k.git "$POWERLEVEL10K_DIR"
+fi
+source $POWERLEVEL10K_DIR/powerlevel10k.zsh-theme
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh  # load preferences
+
+
+###############################################################################
 # Syntax highlightning
 ###############################################################################
 SYNTAX_HIGHLIGHT_DIR="$HOME/bin/zsh-syntax-highlighting"
 if ! test -d $SYNTAX_HIGHLIGHT_DIR; then
-    mkdir -p "SYNTAX_HIGHLIGHT_DIR"
+    mkdir -p "$SYNTAX_HIGHLIGHT_DIR";
     git clone https://github.com/zsh-users/zsh-syntax-highlighting.git "$SYNTAX_HIGHLIGHT_DIR";
 fi
 source $SYNTAX_HIGHLIGHT_DIR/zsh-syntax-highlighting.zsh
+
