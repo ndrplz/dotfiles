@@ -5,6 +5,9 @@ alias la='ls -la'
 
 alias s='ssh'
 
+# Disable default paging so that we can use it as drop-in cat replacement
+alias cat='batcat --paging=never'
+
 # Internet
 alias myip="curl https://ipinfo.io/json" # or /ip for plain-text ip
 alias speedcheck="curl -s https://raw.githubusercontent.com/sivel/speedtest-cli/master/speedtest.py | python3 -"

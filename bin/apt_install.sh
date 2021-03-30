@@ -14,6 +14,7 @@ function install {
 }
 
 # Basics
+install bat
 install curl
 install file
 install git
