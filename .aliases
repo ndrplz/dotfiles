@@ -1,3 +1,5 @@
+unalias -a
+
 ###############################################################################
 # Basics
 ###############################################################################
@@ -33,6 +35,6 @@ alias gst='git status'
 # [Danger Zone] Overriding built-in commands
 ###############################################################################
 alias cat='batcat --paging=never'  # no paging to be a drop-in cat replacement
+alias cp='cp -i'
 alias mv='mv -i'
-alias rm='rm -i'
 
