@@ -46,11 +46,8 @@ export EDITOR='vim'  # what else
 ###############################################################################
 # Aliases
 ###############################################################################
-ALIASES_FILE="$HOME/.aliases.sh"
-if [ -f "$ALIASES_FILE" ]; then	source "$ALIASES_FILE"; fi
-
-ZSH_ALIASES="$HOME/.aliases.zsh"
-if [ -f "$ZSH_ALIASES" ]; then	source "$ZSH_ALIASES"; fi
+ALIASES="$HOME/.aliases.sh" && [[ -f $ALIASES ]] && source $ALIASES
+Z_ALIASES="$HOME/.aliases.zsh" && [[ -f $Z_ALIASES ]] && source $Z_ALIASES
 
 ###############################################################################
 # Prompt
@@ -61,7 +58,7 @@ if ! test -d "$POWERLEVEL10K_DIR"; then
     git clone --depth=1 https://github.com/romkatv/powerlevel10k.git "$POWERLEVEL10K_DIR"
 fi
 source $POWERLEVEL10K_DIR/powerlevel10k.zsh-theme
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh  # load preferences
+P10K_CONFIG="$HOME/.p10k.zsh" && [[ -f $P10K_CONFIG ]] && source $P10K_CONFIG
 
 
 ###############################################################################
