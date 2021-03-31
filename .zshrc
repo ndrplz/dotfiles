@@ -46,12 +46,11 @@ export EDITOR='vim'  # what else
 ###############################################################################
 # Aliases
 ###############################################################################
-ALIASES_FILE="$HOME/.aliases"
+ALIASES_FILE="$HOME/.aliases.sh"
 if [ -f "$ALIASES_FILE" ]; then	source "$ALIASES_FILE"; fi
 
-ZSH_ALIASES="$HOME/.zsh_aliases"
+ZSH_ALIASES="$HOME/.aliases.zsh"
 if [ -f "$ZSH_ALIASES" ]; then	source "$ZSH_ALIASES"; fi
-
 
 ###############################################################################
 # Prompt
