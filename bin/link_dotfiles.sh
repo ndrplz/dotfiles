@@ -25,9 +25,9 @@ function link_dotfile {
   ln -s ${dotfilesDir}/${1} ${dest}
 }
 
-link_dotfile .aliases
+link_dotfile .aliases.sh
+link_dotfile .aliases.zsh
 link_dotfile .vimrc
 link_dotfile .tmux.conf
 link_dotfile .zshrc
-link_dotfile .zsh_aliases
 
