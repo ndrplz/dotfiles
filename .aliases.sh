@@ -21,6 +21,7 @@ alias speedcheck="curl -s https://raw.githubusercontent.com/sivel/speedtest-cli/
 # Git
 ###############################################################################
 alias g='git'
+alias ga='git add'
 alias gaa='git add --all'
 alias gb='git branch'
 alias gc='git commit -v'
