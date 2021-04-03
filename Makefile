@@ -1,11 +1,20 @@
 SHELL=/usr/bin/bash
 DOTFILES = $(shell pwd)
 
-.PHONY: all
-all: install
+.PHONY: fresh_install
+fresh_install: install_apt install_snap install_dotfiles
+	zsh -i -c "figlet Here we are again! | lolcat"
 
-.PHONY: install
-install: install_aliases install_vim install_tmux install_zsh
+.PHONY: install_dotfiles
+install_dotfiles: install_aliases install_vim install_tmux install_zsh
+
+.PHONY: install_apt
+install_apt:
+	$(DOTFILES)/bin/apt_install.sh
+
+.PHONY: install_snap
+install_snap:
+	$(DOTFILES)/bin/snap_install.sh
 
 .PHONY: install_aliases
 install_aliases: clean_aliases
