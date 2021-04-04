@@ -2,8 +2,13 @@ SHELL=/usr/bin/bash
 DOTFILES = $(shell pwd)
 
 .PHONY: fresh_install
-fresh_install: install_apt install_snap install_dotfiles
-	zsh -i -c "figlet Here we are again! | lolcat"
+fresh_install: install_apt install_snap install_dotfiles remap_caps
+	zsh -i -c "figlet Welcome back! | lolcat"
+
+.PHONY: remap_caps
+remap_caps:
+	# Remapping caps lock to ctrl
+	$(DOTFILES)/bin/system_remap_caps.sh
 
 .PHONY: install_dotfiles
 install_dotfiles: install_aliases install_vim install_tmux install_zsh
