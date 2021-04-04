@@ -39,6 +39,9 @@ install_dotfiles: clean_dotfiles
 	# Linking zsh config
 	ln -s $(DOTFILES)/.zshrc $(HOME)/.zshrc
 
+	# Linking powerlevel10k config
+	ln -s $(DOTFILES)/.p10k.zsh $(HOME)/.p10k.zsh
+
 
 .PHONY: clean_dotfiles
 clean_dotfiles:
@@ -54,4 +57,7 @@ clean_dotfiles:
 
 	# Cleaning zsh config
 	rm -f $(HOME)/.zshrc
+
+	# Cleaning powerlevel10k config
+	rm -f $(HOME)/.p10k.zsh
 
