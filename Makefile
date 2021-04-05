@@ -21,7 +21,7 @@ install_apt:
 .PHONY: install_snap
 install_snap:
 
-	$(DOTFILES)/bin/snap_install.sh.PHONY: install_dotfiles
+	$(DOTFILES)/bin/snap_install.sh
 
 
 .PHONY: install_dotfiles
