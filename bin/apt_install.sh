@@ -19,6 +19,7 @@ install curl
 install file
 install git
 install htop
+install mpv
 install ncdu
 install net-tools
 install openvpn
