@@ -25,6 +25,7 @@ install openvpn
 install snapd
 install tmux
 install vim
+install wget
 install zsh
 
 # Fun

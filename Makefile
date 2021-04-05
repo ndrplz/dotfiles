@@ -2,7 +2,7 @@ SHELL=/usr/bin/bash
 DOTFILES = $(shell pwd)
 
 .PHONY: fresh_install
-fresh_install: install_apt install_snap install_dotfiles remap_caps
+fresh_install: install_apt install_snap install_dotfiles install_wallpaper remap_caps
 	zsh -i -c "figlet Welcome back! | lolcat"
 
 .PHONY: remap_caps
@@ -41,6 +41,13 @@ install_dotfiles: clean_dotfiles
 
 	# Linking powerlevel10k config
 	ln -s $(DOTFILES)/.p10k.zsh $(HOME)/.p10k.zsh
+
+
+.PHONY: install_wallpaper
+install_wallpaper:
+
+	wget -O $(HOME)/.wallpaper.png https://w.wallhaven.cc/full/0w/wallhaven-0wg61x.png
+	gsettings set org.gnome.desktop.background picture-uri file://$(HOME)/.wallpaper.png
 
 
 .PHONY: clean_dotfiles
