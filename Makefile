@@ -10,6 +10,7 @@ help:     ## Show this help.
 .PHONY: install_all
 install_all: install_apt install_snap install_dotfiles install_wallpaper remap_caps  ## Install all my beloved software and configs.
 
+	sudo apt upgrade -y
 	zsh -i -c "figlet Welcome back! | lolcat"
 
 
