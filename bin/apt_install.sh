@@ -27,6 +27,7 @@ install snapd
 install tmux
 install vim
 install wget
+install whois
 install zsh
 
 # Fun
