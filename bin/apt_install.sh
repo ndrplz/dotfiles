@@ -24,6 +24,7 @@ install ncdu
 install net-tools
 install openvpn
 install snapd
+install sshfs
 install tmux
 install vim
 install wget
