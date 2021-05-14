@@ -18,6 +18,7 @@ install bat
 install curl
 install file
 install git
+install gron  # Make json greppable
 install htop
 install mpv
 install ncdu
