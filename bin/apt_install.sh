@@ -20,6 +20,7 @@ install file
 install git
 install gron  # Make json greppable
 install htop
+install imagemagick
 install mpv
 install ncdu
 install net-tools
