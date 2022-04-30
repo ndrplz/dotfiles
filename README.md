@@ -21,7 +21,7 @@ This repo contains:
 For the first time, setting up a new machine now takes **minutes** and not _hours_!
 
 ### Dependencies
-  - GNU Make + `sudo` required
+  - GNU Make + git + `sudo` required
 
 
 ### Install
@@ -39,6 +39,17 @@ install_wallpaper              Download and set wallpaper.
 remap_caps                     Remap caps lock to ctrl (system-wide).
 ```
 To initialize a blank machine, I run `make install_all` and I'm basically done :)
+
+Notice: You need to log-out and log-in again to see the caps lock remapping applied.
+
+### Post-Install
+
+Now that `zsh` is configured, you can change the default shell from `bash` to `zsh`:
+```shell
+chsh -s $(which zsh)
+```
+
+Notice: You need to log-out and log-in again to see the change applied.
 
 ### Knowing More
 
