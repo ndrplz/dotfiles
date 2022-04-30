@@ -1,5 +1,5 @@
 ###############################################################################
-# Z shell options (see: man zshoptions)
+# Z shell options (see: https://zsh.sourceforge.io/Doc/Release/Options.html)
 ###############################################################################
 setopt autocd
 setopt autopushd
@@ -8,6 +8,9 @@ setopt sharehistory
 setopt pushdignoredups
 setopt interactivecomments
 
+# Disable history expansion, which is byzantine and dangerous.
+# (see: https://unix.stackexchange.com/a/33341/393163)
+unsetopt banghist
 
 ###############################################################################
 # Key bindings
